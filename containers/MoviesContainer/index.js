@@ -35,7 +35,6 @@ class MoviesContainer extends React.Component {
         });
         this.props.setMovies(updatedMovies);
     }
-    
     render() {
         return (
             <MoviesComponent
