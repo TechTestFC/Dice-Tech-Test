@@ -12,3 +12,4 @@
 - I decided to go with Redux as I'm pretty comfortable setting it up.
 - I did not want to go the Redux-Saga / Redux-Thunk way as I wanted to show usage of debounce / async / await in the React components. 
 - My implementation of star / unstar straight in the redux store means they will disappear every time you will update your search. I could not find an endpoint to actually set a movie as favourite. Arguable, it could have been done as a separate array (movies / starredMovies) in redux and combined in mapStateToProps to preserve the favourite / not favourite status, but I saw little value in doing that. It would obviously be way more important in a real life app.
+- I added the API KEY in clear in ap/constants. I obviously would not do that in a prod environments.
