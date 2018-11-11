@@ -5,11 +5,8 @@
 - [Expo](https://expo.io/) to run the project on mobile. I was not keen on using a library that needs installing a 3rd party app on a phone at first, but this is a recommended way of starting according to the [React Native documentation](https://facebook.github.io/react-native/docs/getting-started).
 
 ## Usage
-### Start the app
 1. Run `npm install` and `npm start`
 2. A web browser window should appear, scan the QR code to automatically display the app.
-### Test
-Run `npm install` and `npm test`
 
 ## Decisions
 - I decided to go with Redux as I'm pretty comfortable setting it up.
