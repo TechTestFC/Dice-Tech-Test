@@ -12,7 +12,7 @@ class MoviesComponent extends React.Component {
                 {
                     this.props.isFetching
                         ? <Loader />
-                        : <MovieList movies={this.props.movies} />
+                        : <MovieList movies={this.props.movies} onMovieStarred={this.props.onMovieStarred} />
                 }
             </View>
         );

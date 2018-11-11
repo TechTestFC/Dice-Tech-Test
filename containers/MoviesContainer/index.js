@@ -24,6 +24,18 @@ class MoviesContainer extends React.Component {
         await this.fetchMovies(filter);
     }
 
+    onMovieStarredHandler = (movie) => {
+        const starred = !!!movie.starred;
+        const updatedMovie = { ...movie, starred };
+        const updatedMovies = this.props.movies.map((existingMovie) => {
+            if (existingMovie.id === updatedMovie.id) {
+                return updatedMovie;
+            }
+            return existingMovie;
+        });
+        this.props.setMovies(updatedMovies);
+    }
+    
     render() {
         return (
             <MoviesComponent
@@ -31,6 +43,7 @@ class MoviesContainer extends React.Component {
                 onFilterChanged={this.onFilterChangedHandler}
                 movies={this.props.movies}
                 isFetching={this.props.isFetching}
+                onMovieStarred={this.onMovieStarredHandler}
             />
         );
     }
