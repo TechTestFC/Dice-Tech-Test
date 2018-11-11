@@ -2,13 +2,10 @@ import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 
 class MoviesComponent extends React.Component {
-    onChangeTextHandler = (text) => {
-        this.props.onFilterChanged(text);
-    }
     render() {
         return (
             <View style={styles.container}>
-                <TextInput placeholder={'Type something'} value={this.props.filter} onChangeText={this.onChangeTextHandler} />
+                <TextInput placeholder={'Type something'} value={this.props.filter} onChangeText={this.props.onFilterChanged} />
             </View>
         );
     }
