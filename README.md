@@ -8,6 +8,12 @@
 1. Run `npm install` and `npm start`
 2. A web browser window should appear, scan the QR code to automatically display the app.
 
+## Architecture
+- containers: React components connected to Redux
+- components: Purely presentational components
+- stores: Redux stores
+
+
 ## Decisions
 - I decided to go with Redux as I'm pretty comfortable setting it up.
 - I did not want to go the Redux-Saga / Redux-Thunk way as I wanted to show usage of debounce / async / await in the React components. 
