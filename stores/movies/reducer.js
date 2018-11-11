@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import { SET_FILTER, SET_MOVIES } from './constants';
+import { SET_FILTER, SET_MOVIES, SET_IS_FETCHING } from './constants';
 
 const initialState = {
     filter: '',
+    isFetching: false,
     movies: [],
 };
 
@@ -15,6 +15,10 @@ const moviesReducer = (state = initialState, action) => {
         case SET_MOVIES: {
             const { movies } = action;
             return { ...state, movies };
+        }
+        case SET_IS_FETCHING: {
+            const { isFetching } = action;
+            return { ...state, isFetching };
         }
         default:
             return state;
