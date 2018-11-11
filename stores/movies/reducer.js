@@ -9,11 +9,11 @@ const initialState = {
 const moviesReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_FILTER: {
-            const { filter } = action.payload;
+            const { filter } = action;
             return { ...state, filter };
         }
         case SET_MOVIES: {
-            const { movies } = action.payload;
+            const { movies } = action;
             return { ...state, movies };
         }
         default:
@@ -21,6 +21,4 @@ const moviesReducer = (state = initialState, action) => {
     }
 };
 
-export default combineReducers({
-    movies: moviesReducer,
-});
+export default moviesReducer;
